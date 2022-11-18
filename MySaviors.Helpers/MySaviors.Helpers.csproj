@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+
+		<PackageId>MySavior.Helpers</PackageId>
+		<Version>1.0.1</Version>
+		<Authors>Rafael França</Authors>
+		<Company>rafaelfranca.com</Company>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>Helper</Description>
+		
+	</PropertyGroup>
+	
+</Project>
