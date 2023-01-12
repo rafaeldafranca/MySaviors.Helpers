@@ -5,13 +5,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 
-		<PackageId>MySavior.Helpers</PackageId>
+		<PackageId>MySaviors.Helpers</PackageId>
 		<Version>1.0.1</Version>
 		<Authors>Rafael França</Authors>
 		<Company>rafaelfranca.com</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>Helper</Description>
-		<Title>MySavior.Helpers</Title>
+		<Title>MySaviors.Helpers</Title>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://www.rafaelfranca.com</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/rafaeldafranca/MySaviors.Helpers</RepositoryUrl>
