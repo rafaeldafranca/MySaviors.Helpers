@@ -6,7 +6,7 @@
 		<Nullable>disable</Nullable>
 
 		<PackageId>MySaviors.Helpers</PackageId>
-		<Version>1.0.3</Version>
+		<Version>1.0.4</Version>
 		<Authors>Rafael França</Authors>
 		<Company>rafaelfranca.com</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
