@@ -2,6 +2,19 @@
 {
     public static class DateTimeExtensions
     {
+        public static DateTime DateByZone(string zone = "E. South America Standard Time")
+        {
+            var z = TimeZoneInfo.FindSystemTimeZoneById(zone);
+            var d = TimeZoneInfo.ConvertTime(DateTime.Now, z);
+            return new DateTime(d.Year, d.Month, d.Day);
+        }
+
+        public static DateTime NowByZone(string zone = "E. South America Standard Time")
+        {
+            var z = TimeZoneInfo.FindSystemTimeZoneById(zone);
+            return TimeZoneInfo.ConvertTime(DateTime.Now, z);
+        }
+
         public static DateTime FirstDayOfMonth(this DateTime value)
             => new DateTime(value.Year, value.Month, 1);
 

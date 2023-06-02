@@ -31,6 +31,12 @@ namespace MySaviors.Helpers.Extensions
             return result;
         }
 
+        public static bool IsEmail(this string value)
+        {
+            string emailPattern = @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            return Regex.IsMatch(value, emailPattern, RegexOptions.IgnoreCase);
+        }
+
         public static bool IsBoolean(this string value)
             => !string.IsNullOrEmpty(value) && _booleanValidValues.Contains(value) || bool.TryParse(value, out _);
 

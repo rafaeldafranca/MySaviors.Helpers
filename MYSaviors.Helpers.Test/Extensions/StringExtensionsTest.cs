@@ -72,6 +72,28 @@ namespace MySaviors.Helpers.Test.Extensions
             string str = string.Concat(Enumerable.Repeat("0", tamanho));
             Assert.Equal(str, result.Substring(result.Count() - tamanho));
         }
+
+        [Theory]
+        [InlineData("email@email.com")]
+        [InlineData("email@email.com.br")]
+        [InlineData("email@email.aa")]
+        public void IsEmail_ShouldBeTrue(string value)
+        {
+            var result = value.IsEmail();
+            Assert.True(result);
+        }
+
+        [Theory]
+        [InlineData("emailemail.com")]
+        [InlineData("email@.com")]
+        [InlineData("email@email")]
+        [InlineData("@email.aa")]
+        public void IsEmail_ShouldBeFalse(string value)
+        {
+            var result = value.IsEmail();
+            Assert.False(result);
+        }
+
         [Fact]
         public void FromSpaceSeparatedString_MustBe_Success()
         {
