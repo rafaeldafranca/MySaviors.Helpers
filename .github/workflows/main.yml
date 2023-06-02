@@ -1,0 +1,28 @@
+name: Deploy MySaviors.Helpers NuGet Package
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup NuGet.exe
+      uses: nuget/setup-nuget@v1
+
+    - name: Restore NuGet packages
+      run: nuget restore
+
+    - name: Build project
+      run: dotnet build --configuration Release
+
+    - name: Pack NuGet package
+      run: dotnet pack --configuration Release --no-build --output ./nuget
+
+    - name: Push NuGet package
+      run: dotnet nuget push ./nuget/MySaviors.Helpers.*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.MYSAVIORS_API_KEY }}
